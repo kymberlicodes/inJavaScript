@@ -10,7 +10,7 @@
       <form [formGroup]="customerForm">
         <user [customerForm]="customerForm.userForm"></user>
         <login [customerForm]="customerForm.loginForm"></login>
-        <upload-img></upload-img>
+        <upload-img [customerForm]="customerForm.imgForm"></upload-img>
       </form>
     </div>
   </div>

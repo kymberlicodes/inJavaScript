@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, NgForm, FormBuilder } from '@angular/forms';
 import { Customer } from './customer';
+import { NG_MODEL_WITH_FORM_CONTROL_WARNING } from '@angular/forms/src/directives';
 
 @Component({
   selector: 'root',
@@ -26,6 +27,9 @@ export class AppComponent implements OnInit {
       loginForm: new FormGroup({
         email: new FormControl(),
         password: new FormControl()
+      }),
+      imgForm: new FormGroup({
+        imageUpload: new FormControl()
       })
     });
   }

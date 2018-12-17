@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'upload-img',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upload-photo.component.scss']
 })
 export class UploadPhotoComponent implements OnInit {
+
+  @Input() customerForm: FormGroup;
 
   constructor() { }
 
