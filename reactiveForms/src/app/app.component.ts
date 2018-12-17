@@ -15,21 +15,25 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerForm = new FormGroup({
-      firstName: new FormControl(),
-      lastName: new FormControl(),
-      address: new FormControl(),
-      city: new FormControl(),
-      state: new FormControl(),
-      zip: new FormControl(),
-      email: new FormControl(),
-      password: new FormControl()
+      userForm: new FormGroup({
+        firstName: new FormControl(),
+        lastName: new FormControl(),
+        address: new FormControl(),
+        city: new FormControl(),
+        state: new FormControl(),
+        zip: new FormControl()
+      }),
+      loginForm: new FormGroup({
+        email: new FormControl(),
+        password: new FormControl()
+      })
     });
   }
 
-  save(customerForm: NgForm) {
-    console.log(customerForm.form);
-    console.log('Saved: ' + JSON.stringify(customerForm.value));
-  }
+  // save(customerForm: NgForm) {
+  //   console.log(customerForm.form);
+  //   console.log('Saved: ' + JSON.stringify(customerForm.value));
+  // }
 
   title = 'Reactive Forms Test App';
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'login',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-information.component.scss']
 })
 export class LoginInformationComponent implements OnInit {
+
+  @Input() customerForm: FormGroup;
 
   constructor() { }
 
